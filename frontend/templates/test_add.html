@@ -1,0 +1,25 @@
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+function encodeImageFileAsURL(element){	
+	       $.ajax({
+                type: 'POST',
+                url:"http://3.94.45.77/api/v1/categories", 
+				data: "fg",	
+				dataType:"text",
+				 
+				crossDomain: true,
+                success: function(data) {
+                    console.log(data);
+					alert("Finally!!");
+					 },
+            }); 
+	
+  }
+  
+
+</script>
+<input type="file" onchange="encodeImageFileAsURL(this)" /input>
+</body>
+</html>

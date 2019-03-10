@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UPLOAD</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<script src="{{ url_for('static', filename='js/upload.js') }}"></script>
+</head>
+<body>
+<input type="number" placeholder="actId" id="actId" disabled />
+<input type="text" placeholder="username" id="username" required/>
+<input type="text" placeholder="caption" id="caption" required/>
+<select id="cat" required>
+</select>
+<input type='file' id="inp" class="form-control-file border" required/>
+<img id="img" height="150" src="{{ url_for('static', filename='images/upload.png') }}"><br>
+<input type="submit" id="upload" value="UPLOAD"></button>
+
+<p id="b64" style="color:white"></p>
+
+	<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+	<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+	<a href="/" class="btn btn-success col-lg-12 btn-lg" id="home" style="display:none;">Home</a>
+	<a href="/cat" class="btn btn-success col-lg-12 btn-lg" id="cate" style="display:none;">Categories</a>
+</body>
+</html>

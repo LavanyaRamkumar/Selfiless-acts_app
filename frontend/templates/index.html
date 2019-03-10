@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> SELFILESS </title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="banner">
+		<dir class="overlay">
+			<h1 style="font-size:50px">SELFILESS</h1>
+		</dir>
+	</div>
+<br><br>
+	<div class="row d-flex justify-content-center">
+			<a href="/signup" class="btn btn-light col-lg-3 btn-lg" id="Signup" >Signup</a>
+			<a href="/login" class="btn btn-light col-lg-3 btn-lg" id="Login" >Login</a>
+	</div>
+	<br>
+	<div class="row d-flex justify-content-center">
+			<a href="/addcat" class="btn btn-light col-lg-3 btn-lg" id="aCategory" >Add Category</a>
+	</div>
+	<div class="row d-flex justify-content-center">
+			<a href="/cat" class="btn btn-light col-lg-3 btn-lg" id="Category" >Category</a>
+			<button class="btn btn-light col-lg-3 btn-lg" id="Upload" >Upload</button>
+	</div>
+	<br>
+	<div class="row d-flex justify-content-center">
+			<a href="/cat" class="btn btn-light col-lg-3 btn-lg" id="removeUser" >Remove User</a>
+			<button class="btn btn-light col-lg-3 btn-lg" id="removeCat" >Remove a Category</button>
+	</div>
+	<span id="loginCheck" style="display: none;">{{val}}</span>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#Upload').click(function(event) {
+				event.preventDefault();
+				if($('#loginCheck').text() == "False"){
+					window.location.href = "/login/upload" ;
+				}
+				else
+				{
+					window.location.href = "/upload"
+				}
+			});
+		});
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>UPLOAD</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	
+	<script src="{{ url_for('static', filename='js/ad_cat.js') }}"></script>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<div class=" container row d-flex justify-content-center">
+		
+		<input id="cat" required class="form-control col-lg-6">
+
+		</input>
+
+		<button  class="form-control col-lg-6" type="submit" id="upload" >Add</button>
+	</div>
+
+	<div class="row d-flex justify-content-center">
+		<button class="btn btn-default" id="load">
+  			<span class="spinner-border spinner-border-lg"></span>
+		</button>
+	</div>
+	<br>
+	<br>
+<div class="row d-flex justify-content-center">
+<div id="images">
+</div>
+	
+
+
+
+
+<div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+<div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+</body>
